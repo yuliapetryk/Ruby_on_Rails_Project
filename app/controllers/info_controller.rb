@@ -1,6 +1,6 @@
 class InfoController < ApplicationController
 
-    http_basic_authenticate_with name: "log", password: "pass", only: :destroy
+    
 
 
     def showFrom
