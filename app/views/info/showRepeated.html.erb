@@ -1,5 +1,14 @@
-<h3>Regular customers</h3>
+<h3 style="background-color: #4F6367; color: #FFFFFF; padding: 10px; border-radius: 5px;">Regular customers</h3>
 
-<% @list_of_addressees.each do |addressee, count| %>
-    <p><%= "#{count} parcels were sent to #{addressee}" %></p>
+
+<p style="background-color: #B8D8D8; padding: 10px; border-radius: 5px; margin-bottom: 15px; display: inline-block;">
+  <span style="color: #FE5F55; font-weight: bold;">Answer:</span>
+
+  <% @list_of_addressees.each do |addressee, count| %>
+    <p style="background-color: #4F6367; color: #ffffff; padding: 5px 10px; border-radius: 5px; margin-left: 5px;"">
+      <%= "#{count} parcels were sent to #{addressee}" %>
+    </p>
   <% end %>
+  
+</p>
+

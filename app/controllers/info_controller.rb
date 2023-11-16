@@ -1,8 +1,5 @@
 class InfoController < ApplicationController
 
-    
-
-
     def showFrom
         @amount_from_Kyiv = find_parcels_from_city
     end
