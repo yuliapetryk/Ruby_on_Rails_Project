@@ -1,0 +1,17 @@
+<h1 style="background-color: #B8D8D8;">Postal sorting</h1>
+
+<h3 style="background-color: #4F6367;color: #ffffff">All our customers</h3>
+<ul style="list-style: none; padding: 0;">
+  <% @parcels.each do |parcel| %>
+    <li style="margin-bottom: 10px;">
+      <%= link_to parcel.addressee, parcel, style: "display: block; padding: 10px; background-color: #f0f0f0; border-radius: 5px; text-decoration: none; color: #333; transition: background-color 0.3s;" %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "New Parcel", new_parcel_path, class: "rounded-button", style: "background-color: #FE5F55; color: #ffffff; padding: 10px 15px; text-decoration: none;" %>
+
+<%= link_to "Information", list_path, class: "rounded-button", style: "background-color: #7A9E9F; color: #ffffff; padding: 10px 15px; text-decoration: none;" %>
+
+

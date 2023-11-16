@@ -1,0 +1,55 @@
+
+<%= form_with model: @parcel do |form| %>
+  <div style="margin-bottom: 15px; background-color: #B8D8D8; padding: 15px; border-radius: 10px;">
+    <%= form.label :city, style: "display: block; font-weight: bold; margin-bottom: 5px;" %><br>
+    <%= form.text_field :city, style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" %>
+    <% @parcel.errors.full_messages_for(:city).each do |message| %>
+      <div style="color: #FF0000; margin-top: 5px;"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div style="margin-bottom: 15px; background-color: #B8D8D8; padding: 15px; border-radius: 10px;">
+    <%= form.label :street, style: "display: block; font-weight: bold; margin-bottom: 5px;" %><br>
+    <%= form.text_field :street, style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" %>
+    <% @parcel.errors.full_messages_for(:street).each do |message| %>
+      <div style="color: #FF0000; margin-top: 5px;"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div style="margin-bottom: 15px; background-color: #B8D8D8; padding: 15px; border-radius: 10px;">
+    <%= form.label :house, style: "display: block; font-weight: bold; margin-bottom: 5px;" %><br>
+    <%= form.text_field :house, style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" %>
+    <% @parcel.errors.full_messages_for(:house).each do |message| %>
+      <div style="color: #FF0000; margin-top: 5px;"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div style="margin-bottom: 15px; background-color: #B8D8D8; padding: 15px; border-radius: 10px;">
+  <%= form.label :appartment, style: "display: block; font-weight: bold; margin-bottom: 5px;" %><br>
+  <%= form.text_field :appartment, style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" %>
+  <% @parcel.errors.full_messages_for(:appartment).each do |message| %>
+    <div style="color: #FF0000; margin-top: 5px;"><%= message %></div>
+  <% end %>
+</div>
+
+<div style="margin-bottom: 15px; background-color: #B8D8D8; padding: 15px; border-radius: 10px;">
+  <%= form.label :addressee, style: "display: block; font-weight: bold; margin-bottom: 5px;" %><br>
+  <%= form.text_field :addressee, style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" %>
+  <% @parcel.errors.full_messages_for(:addressee).each do |message| %>
+    <div style="color: #FF0000; margin-top: 5px;"><%= message %></div>
+  <% end %>
+</div>
+
+<div style="margin-bottom: 15px; background-color: #B8D8D8; padding: 15px; border-radius: 10px;">
+  <%= form.label :value, style: "display: block; font-weight: bold; margin-bottom: 5px;" %><br>
+  <%= form.text_area :value, style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" %>
+  <% @parcel.errors.full_messages_for(:value).each do |message| %>
+    <div style="color: #FF0000; margin-top: 5px;"><%= message %></div>
+  <% end %>
+</div>
+
+
+  <div style="margin-bottom: 15px;">
+    <%= form.submit style: "padding: 10px; background-color: #4F6367; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;" %>
+  </div>
+<% end %>

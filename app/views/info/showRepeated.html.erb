@@ -1,0 +1,5 @@
+<h3>Regular customers</h3>
+
+<% @list_of_addressees.each do |addressee, count| %>
+    <p><%= "#{count} parcels were sent to #{addressee}" %></p>
+  <% end %>
