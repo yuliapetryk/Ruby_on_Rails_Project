@@ -1,7 +1,7 @@
 class ParcelsController < ApplicationController
 
   http_basic_authenticate_with name: "log", password: "pass"
-
+  http_basic_authenticate_with name: "destroy", password: "pass", only: :destroy
   def index
     @parcels=Parcel.all
   end
